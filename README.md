@@ -1,4 +1,4 @@
-##Issues/thoughts
+## Issues/thoughts
 I found confusing one thing in Figma design : asterisks instead of bullets in password field.
 I wonder if that was mandatory to implement or it was browser specific display while creating design, but I skipped that part.
 As I know it is possible to use `-webkit-text-security: square;` to acheive that effect, but that doesn't apply to password field.
