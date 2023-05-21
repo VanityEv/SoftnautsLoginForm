@@ -1,7 +1,119 @@
-@use '../../variables' as var;
+@use "../../variables" as var;
 
+//Form container
 .LoginForm {
-    padding: var.$contentMargin+px;
+  padding-top: var.$contentMargin + px;
+  height: 624px;
+  width: 560px;
+  left: 439px;
+  border-radius: var.$borderRadius + px;
+}
+//Forgotten password link container
+/*bundle password label with forgotten password link to same height */
+.bundleLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+//Submit button container
+/*align width of button with inputs and place it at flex end */
+.submitContainer {
+  width: var.$formElementWidth + px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-// TODO: Your code
+//Form elements
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+}
+
+.legendTypography {
+  width: var.$formElementWidth + px;
+  height: 40px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0em;
+  display: flex;
+  margin: 80px 80px 40px 80px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+a {
+  color: #3d8ebb;
+  font-weight: 400;
+}
+.input {
+  height: 40px;
+  width: var.$formElementWidth + px;
+  border-radius: var.$borderRadius + px;
+  padding: 8px 8px 0px 16px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  border: 1.5px solid var.$colorInfo;
+}
+.input::placeholder {
+  color: var.$colorInfoText;
+}
+
+hr {
+  border: 1px solid #f2f7fa;
+}
+.errorLine {
+  flex-direction: row;
+  width: 380px;
+  gap: 6.67px;
+  padding: 0;
+  margin-bottom: 24px;
+}
+.errorText {
+  color: var.$colorError;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+.loginButton {
+  height: 40px;
+  width: 129px;
+  border-radius: var.$borderRadius + px;
+  border: 0;
+  padding: 8px 40px;
+  background: #3d8ebb;
+  color: white;
+  margin-left: auto;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.bottomLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+//Dependant styles
+.fieldset > label,
+.fieldset > .bundleLabel {
+  height: 24px;
+  width: var.$formElementWidth + px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.012em;
+  flex-grow: 1;
+  margin-bottom: 8px;
+}
+
+.bottomLink > p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.012em;
+}
